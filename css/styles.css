@@ -1,26 +1,27 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+* {
+    font-family: Arial, Verdana, sans-serif;
     color: #333;
 }
 
-header {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+body {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    margin: 0;
+    padding: 0;
 }
 
-nav {
-    margin-left: auto;
-	margin-right: 30px;
+header {
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
 }
 
 nav ul {
@@ -46,9 +47,10 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding: 20px 40px;
+    align-items: center;
+    text-align: center;
+    padding: 10px 40px;
+    margin-top: 30px;
     margin-bottom: 0px;
 }
 
@@ -57,15 +59,16 @@ nav a {
     margin: 10px 0;
 }
 
-.hero-section h2 {
+.hero-section h2, .hero-section p {
     font-size: 1.5em;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
-.portfolio-section {
-    padding: 30px 20px;
+.portfolio-section, .content-section {
+    padding: 20px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .portfolio-filters {
@@ -81,6 +84,21 @@ nav a {
     margin: 0 5px;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-filters button a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-grid {
@@ -105,9 +123,75 @@ nav a {
 .generic-section {
     padding: 20px 20px;
     max-width: 800px;
-    margin: 20px 40px;
+    margin: 20px auto;
     background: #f8f8f8;
     border-radius: 5px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    max-width: 45%;
+    box-sizing: border-box;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-column {
+    text-align: left;
+}
+
+.left-column pre {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.blackjack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.blackjack-item {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackjack-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 662px;
+    max-height: 418px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.wider-code {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* links */
@@ -128,6 +212,79 @@ nav a {
 footer {
     background: #f8f8f8;
     text-align: center;
-    padding: 20px 0;
     border-top: 1px solid #ddd;
+    padding: 5px;
+    width: 100%;
+}
+
+.blackjack-description {
+    text-align: left;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.blackjack-description p {
+    margin: 5px 0;
+}
+
+.photography-page .photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photography-page .photo-item {
+    margin-bottom: 20px;
+}
+
+.photography-page .photo-item img {
+    width: auto;
+    height: auto;
+    max-height: 75vh;
+    display: block;
+}
+
+.photography-page .project-description {
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.photography-page .project-description p {
+    margin: 5px 0;
+}
+
+.description-section {
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.description-section p {
+    margin: 5px 0;
+}
+
+.visual-argument-page .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+
+.visual-argument-page .image-section a {
+    display: flex;
+    justify-content: center;
+}
+
+.visual-argument-page .main-image {
+    max-width: 64%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
