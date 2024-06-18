@@ -267,24 +267,36 @@ footer {
     margin: 5px 0;
 }
 
-.visual-argument-page .image-section {
+.soundscape-narrative-page .image-section {
     display: flex;
     justify-content: center;
-    align-items: top;
+    padding: 20px;
+}
+
+.soundscape-narrative-page .main-image {
+    max-width: 75%;
+    height: auto;
+    display: block;
+}
+
+.visual-argument-page .image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    min-height: 50vh;
 }
 
-.visual-argument-page .image-section a {
+.visual-argument-page .image-item {
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .visual-argument-page .main-image {
-    max-width: 64%;
+    max-width: 75%; 
     height: auto;
     display: block;
-    object-fit: contain;
 }
