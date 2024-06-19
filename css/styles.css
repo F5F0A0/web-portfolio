@@ -300,3 +300,9 @@ footer {
     height: auto;
     display: block;
 }
+
+.description-section a:hover, 
+.blackjack-description a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
